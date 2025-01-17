@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universe Facts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .fact-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      margin: 1rem;
+      max-width: 300px;
+      padding: 1rem;
+      text-align: left;
+      transition: transform 0.2s;
+    }
+
+    .fact-card:hover {
+      transform: scale(1.05);
+    }
+
+    .fact-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #4CAF50;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #4CAF50;
+      color: white;
+      position: sticky;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fascinating Facts About the Universe</h1>
+  </header>
+  <main id="facts-container"></main>
+  <footer>
+    <p>&copy; 2025 Universe Facts App</p>
+  </footer>
+  <script>
+    const facts = [
+      {
+        fact: "The Universe is Expanding",
+        description: "The universe has been expanding since the Big Bang, approximately 13.8 billion years ago. This expansion is accelerating due to dark energy, a mysterious force that makes up about 68% of the universe."
+      },
+      {
+        fact: "There are More Stars Than Grains of Sand on Earth",
+        description: "Estimates suggest there are about 200 billion trillion (2 x 10²³) stars in the observable universe, far outnumbering the grains of sand on all Earth’s beaches."
+      },
+      {
+        fact: "Black Holes Can Slow Down Time",
+        description: "Near the event horizon of a black hole, the gravitational pull is so strong that time dilation occurs, making time move slower compared to regions far from the black hole."
+      },
+      {
+        fact: "The Universe is Transparent",
+        description: "For the first 380,000 years after the Big Bang, the universe was opaque due to high-energy photons scattering off electrons. It became transparent when it cooled enough for atoms to form, allowing light to travel freely."
+      },
+      {
+        fact: "There’s a Giant Cloud of Alcohol in Space",
+        description: "Sagittarius B2, a massive molecular cloud near the Milky Way’s center, contains enough alcohol to fill 400 trillion trillion pints of beer. However, it’s not drinkable as it’s mostly methanol."
+      },
+      {
+        fact: "There’s a Cold Spot in the Universe",
+        description: "The Cosmic Microwave Background (CMB) radiation has a mysterious cold spot, which is much cooler than expected. Some theories suggest it might be caused by a supervoid or even other universes."
+      },
+      {
+        fact: "The Most Powerful Explosion Ever Observed",
+        description: "Gamma-ray bursts (GRBs) are the most energetic explosions in the universe, releasing as much energy in seconds as our Sun will over its entire 10-billion-year lifetime."
+      },
+      {
+        fact: "Galaxies Can Collide",
+        description: "Our Milky Way is on a collision course with the Andromeda Galaxy, set to merge in about 4.5 billion years. This event will form a new galaxy, often referred to as 'Milkomeda.'"
+      },
+      {
+        fact: "Neutron Stars are Mind-Bogglingly Dense",
+        description: "A sugar-cube-sized piece of neutron star material weighs about a billion tons, as it is packed with the remnants of collapsed stars."
+      },
+      {
+        fact: "The Universe is Mostly Empty",
+        description: "Only about 5% of the universe is made up of ordinary matter (atoms). The rest is dark matter (27%) and dark energy (68%), which we cannot directly observe but infer through their gravitational effects."
+      }
+    ];
+
+    const factsContainer = document.getElementById("facts-container");
+
+    facts.forEach(fact => {
+      const factCard = document.createElement("div");
+      factCard.classList.add("fact-card");
+
+      factCard.innerHTML = `
+        <h3 class="fact-title">${fact.fact}</h3>
+        <p>${fact.description}</p>
+      `;
+
+      factsContainer.appendChild(factCard);
+    });
+  </script>
+</body>
+</html>
